@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3 {
+    color: #2a4d69;
+  }
+  
+  .my-article {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+  }
+
+  #productCategory ul li a{
+    display: block;
+    padding:0 0 0 13px;
+    margin:0 5px;
+    border-bottom: none;
+    line-height:1.4;
+  }

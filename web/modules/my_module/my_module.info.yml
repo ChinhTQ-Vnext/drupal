@@ -1,0 +1,6 @@
+name: 'my_module'
+type: module
+description: 'Custom module to alter Views queries when using Bootstrap 5.'
+package: '@todo Add package'
+core_version_requirement: ^10 || ^11
+dependencies: []
