@@ -29,13 +29,13 @@ function bootstrap5_preprocess_product_term_views_view(&$variables)
                 $entity->url_redirect = $term_url . "/" . $entity->get('field_slug')->value;
                 $field_category = $entity->get('field_category')->referencedEntities();
                 $parent_ids = $term->get('parent')->getValue();
-                if (!empty($parent_ids)) {
+                if (!empty($parent_ids) && $parent_term == null) {
 
                     $parent_tid = $parent_ids[0]['target_id'];
                     $parent_term = Term::load($parent_tid);
                     // remake url
                     $url = $term->field_url->uri;
-                    $parent_term_url = $term->url_redirect = Url::fromUri($url)->toString();
+                    $parent_term_url = Url::fromUri($url)->toString();
                     $parent_term->parent_term_url = $parent_term_url;
 
                     $child_terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
@@ -45,7 +45,7 @@ function bootstrap5_preprocess_product_term_views_view(&$variables)
                     foreach ($child_terms as $child_term) {
                         // remake url
                         $url = $child_term->field_url->uri;
-                        $child_term_url = $term->url_redirect = Url::fromUri($url)->toString();
+                        $child_term_url = Url::fromUri($url)->toString();
                         $child_term->child_term_url = $child_term_url;
                     }
                 }
@@ -106,27 +106,85 @@ function bootstrap5_preprocess_product_detail_views_view(&$variables)
 {
     $title = "";
     $product = null;
+    $parent_term = null;
+    $child_terms = [];
     if ($variables['rows']) {
         $product = $variables['rows'][0]['#rows'][0]['#row']->_entity;
+        $field_category = $product->get('field_category')->referencedEntities();
+        if($field_category) {
+            $category_entity =  $field_category[0];
+            $parent_ids = $category_entity->get('parent')->getValue();
+            if (!empty($parent_ids) && $parent_term == null) {
+
+                $parent_tid = $parent_ids[0]['target_id'];
+                $parent_term = Term::load($parent_tid);
+                // remake url
+                $url = $category_entity->field_url->uri;
+                $parent_term_url = $category_entity->url_redirect = Url::fromUri($url)->toString();
+                $parent_term->parent_term_url = $parent_term_url;
+
+                $child_terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+                    'parent' => $parent_tid,
+                ]);
+
+                foreach ($child_terms as $child_term) {
+                    // remake url
+                    $url = $child_term->field_url->uri;
+                    $child_term_url = Url::fromUri($url)->toString();
+                    $child_term->child_term_url = $child_term_url;
+                }
+            }
+        }
         $title = $product->get('field_product_name')->value;
     }
 
     $variables['view_array']['#title']['#markup'] = $title;
     $variables['title'] = $title;
     $variables['product'] = $product;
+    $variables['parent_term'] = $parent_term;
+    $variables['child_terms'] = $child_terms;
 }
 
 function bootstrap5_preprocess_product_spec_views_view(&$variables)
 {
     $title = "";
     $product = null;
+    $parent_term = null;
+    $child_terms = [];
     if ($variables['product_spec']) {
         $product = $variables['product_spec']->get('field_product')->entity;
+        $field_category = $product->get('field_category')->referencedEntities();
+        if($field_category) {
+            $category_entity =  $field_category[0];
+            $parent_ids = $category_entity->get('parent')->getValue();
+            if (!empty($parent_ids) && $parent_term == null) {
+
+                $parent_tid = $parent_ids[0]['target_id'];
+                $parent_term = Term::load($parent_tid);
+                // remake url
+                $url = $category_entity->field_url->uri;
+                $parent_term_url = $category_entity->url_redirect = Url::fromUri($url)->toString();
+                $parent_term->parent_term_url = $parent_term_url;
+
+                $child_terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+                    'parent' => $parent_tid,
+                ]);
+
+                foreach ($child_terms as $child_term) {
+                    // remake url
+                    $url = $child_term->field_url->uri;
+                    $child_term_url = Url::fromUri($url)->toString();
+                    $child_term->child_term_url = $child_term_url;
+                }
+            }
+        }
         $title = $product->get('field_product_name')->value;
     }
 
     $variables['view_array']['#title']['#markup'] = $title;
     $variables['title'] = $title;
+    $variables['parent_term'] = $parent_term;
+    $variables['child_terms'] = $child_terms;
 }
 
 function bootstrap5_preprocess_home_views_view(&$variables)

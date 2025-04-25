@@ -221,3 +221,28 @@
 	</div>
 	<!-- /pageArea -->
 </div>
+<div
+	id="contentsSide">
+	<!-- Class:SideNavi(1-5) Start -->
+	<dl class="toggle-set" id="localMenu">
+
+		<dt>
+			<span>
+				<a href="{{parent_term.parent_term_url}}">
+					{{parent_term.label}}
+				</a>
+			</span>
+		</dt>
+		<dd class="toggle-box">
+			<ul>
+				{% for child_term in child_terms %}
+					<li>
+						<span>
+							<a href="{{child_term.child_term_url}}">{{child_term.label}}</a>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	</dl>
+</div>

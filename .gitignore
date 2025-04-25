@@ -4,6 +4,8 @@
 /private/
 /node_modules/
 composer.lock
+/web/sites/default/files/css/
+/web/sites/default/files/js/
 
 # Ignore sensitive information
 # /web/sites/*/settings.local.php

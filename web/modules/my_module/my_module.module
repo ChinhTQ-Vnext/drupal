@@ -15,6 +15,7 @@ use Drupal\views\ViewExecutable;
  */
 function my_module_preprocess_breadcrumb(array &$variables)
 {
+  $variables['breadcrumb'][0]['text'] = "HOME";
   $route_name = \Drupal::routeMatch()->getRouteName();
   if ($route_name === 'view.home.page_1') {
     $variables['breadcrumb'] = [];
@@ -68,14 +69,16 @@ function my_module_preprocess_breadcrumb(array &$variables)
       $view->execute();
 
       $results = $view->result;
-      if (sizeof($results) > 0) {
+      if (sizeof($variables['breadcrumb']) == 4) {
         $entity = $results[0]->_entity;
-        foreach ($variables['breadcrumb'] as $key => $breadcrumb) {
-          if ($breadcrumb['text'] === 'Product Detail') {
-            $variables['breadcrumb'][$key]['text'] =  $entity->get('field_product_name')->value;
-            $variables['breadcrumb'][$key]['url'] =  $entity->field_url->uri;
-          }
-        }
+        $field_category = $entity->get('field_category')->referencedEntities();
+        $category_entity =  $field_category[0];
+        $parent_ids = $category_entity->get('parent')->getValue();
+        $parent_tid = $parent_ids[0]['target_id'];
+        $parent_term = Term::load($parent_tid);
+        $variables['breadcrumb'][2]['text'] = $parent_term->label();
+        $variables['breadcrumb'][4]['text'] =  $entity->get('field_product_name')->value;
+        $variables['breadcrumb'][4]['url'] =  $entity->field_url->uri;
       }
     }
   }
@@ -93,17 +96,15 @@ function my_module_preprocess_breadcrumb(array &$variables)
       if (sizeof($results) > 0) {
         $entity = $results[0]->_entity;
         $product_entity = $entity->get('field_product')->entity;
-        foreach ($variables['breadcrumb'] as $key => $breadcrumb) {
-          if ($breadcrumb['text'] === 'Product Detail') {
-            $variables['breadcrumb'][$key]['text'] =  $product_entity->get('field_product_name')->value;
-            $variables['breadcrumb'][$key]['url'] =  $product_entity->field_url->uri;
-          }
-
-          if ($breadcrumb['text'] === 'Product Spec') {
-            $variables['breadcrumb'][$key]['text'] =  $product_entity->get('field_product_name')->value . '　仕様';
-            $variables['breadcrumb'][$key]['url'] =  $entity->get('field_url_spec')->value;
-          }
-        }
+        $field_category = $product_entity->get('field_category')->referencedEntities();
+        $category_entity =  $field_category[0];
+        $parent_ids = $category_entity->get('parent')->getValue();
+        $parent_tid = $parent_ids[0]['target_id'];
+        $parent_term = Term::load($parent_tid);
+        $variables['breadcrumb'][2]['text'] = $parent_term->label();
+        $variables['breadcrumb'][4]['text'] =  $product_entity->get('field_product_name')->value;
+        $variables['breadcrumb'][5]['text'] =  $product_entity->get('field_product_name')->value . '　仕様';
+        $variables['breadcrumb'][5]['url'] =  $entity->get('field_url_spec')->value;
       }
     }
   }

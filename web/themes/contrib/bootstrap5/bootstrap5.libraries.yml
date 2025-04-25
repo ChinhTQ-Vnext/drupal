@@ -153,6 +153,7 @@ product_styles:
   css:
     theme:
       css/product.css: {}
+      css/common.css: {}
 category_styles:
   version: 1.0
   css:
@@ -162,6 +163,7 @@ product_detail_styles:
   version: 1.0
   css:
     theme:
+      css/common.css: {}
       css/product-detail.css: {}
   js:
     js/product-detail.js: {}

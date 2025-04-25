@@ -14,18 +14,7 @@
 	float:none;
 	clear:both;
 }
-/* Side Layout
--------------------------------------------------------------*/
-#contentsSide{
-	width:240px;
-	float:right;
-	padding:35px 0 60px;
-}
-#column-right #contentsSide{
-	width:240px;
-	float:right;
-	padding:0 0 60px;
-}
+
 /*=============================================================
 TTL Layout
 =============================================================*/
@@ -943,6 +932,7 @@ ul li {
 
 .swiper-thumbnail .swiper-slide {
 	width: fit-content !important;
+	cursor: pointer !important;
 }
 
 .swiper-large .swiper-slide {
