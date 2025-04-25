@@ -1,0 +1,689 @@
+/* === HTML === */
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  form {
+    margin: 0px auto;
+    padding: 0px;
+  }
+  img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+  a{
+    border:0px;
+  }
+  span.clear {
+    clear: left;
+    height: 1px;
+  }
+  
+  /* === headerInner === */
+  
+  #headerInner {
+      display: flex;
+      justify-content: center;
+  }
+  
+  /* === Layout === */
+  
+  div#SS_container {
+    margin: 0px auto;
+    text-align: left;
+      width: 970px;
+  }
+  div#SS_contents {
+    padding-bottom: 5px;
+    background-color: #FFF;
+  }
+  
+  /* === Search === */
+  
+  div.SS_search {
+   margin: 20px 0px 20px 0px;
+  }
+  div.SS_searchCategory {
+   margin-top: 3px;
+  }
+  div.SS_searchCategory label {
+   margin-left: 2px;
+  }
+  input.SS_searchQuery {
+   font-size: 110%;
+   height: 30px;
+   margin-top: 3px;
+   margin-bottom: 3px;
+   vertical-align: middle;
+   width: 232px;
+  }
+  div.SS_search input.SS_searchSubmit {
+   background: url(https://www.iodata.jp/common/img/btn_search.gif) 0 0 no-repeat;
+   width: 48px;
+   height: 22px;
+   border: none;
+   cursor: pointer;
+  }
+  
+  
+  /* === Navication === */
+  
+  div#SS_navi {
+   padding: 5px 0px 5px 0px;
+   border-top: 1px solid #CCC;
+   border-bottom: 1px solid #CCC;
+   background-color: #FAFAFA;
+   height: 27px;
+  }
+  div#SS_navi div#SS_naviResult {
+    width: 520px;
+    float: left;
+  }
+  div#SS_navi span#SS_queryString {
+   padding-left: 5px;
+  }
+  div#SS_navi span#SS_totalHits {
+   padding-left: 10px;
+  }
+  div#SS_navi span#SS_showCounts {
+   padding-left: 10px;
+  }
+  
+  div#SS_navi span#SS_naviSort {
+   float:left;
+   width: 150px;
+   text-align: right;
+   display: block;
+  }
+  span#SS_sortMatch {
+  }
+  span#SS_sortDate {
+   margin-left: 4px;
+  }
+  
+  
+  /* === Adlink === */
+  
+  div#SS_adlink {
+    width: 683px;
+    margin: 20px 0px 20px 8px;
+    padding: 5px 0px 0px 5px;
+    background-color: #E8F4FF;
+    border: 1px solid #D2EAFF;
+  }
+  div.SS_adlinkItem {
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+    min-height: 130px;
+  }
+  div.SS_adlinkImage {
+    float: left;
+    width: 170px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+  }
+  div.SS_adlinkImage img {
+    padding: 4px;
+  }
+  div.SS_adlinkPage {
+    float: left;
+    width: 485px;
+    line-height: 1.5em;
+  
+    margin-left: 15px;
+  }
+  div.SS_adlinkPage div.SS_adlinkTitle {
+    font-size: 120%;
+  }
+  div.SS_adlinkPage div.SS_adlinkSummary {
+    margin: 4px 0px;
+    font-size: 100%;
+  }
+  div.SS_adlinkPage div.SS_adlinkUrl {
+    font-size: 100%;
+    color: #006F00;
+  }
+  div.SS_adlinkPage span.SS_highlight {
+    font-weight: bold;
+  }
+  
+  /* === Result === */
+  
+  div#SS_result {
+    margin: 25px 0px 20px 15px;
+    width: 683px; 
+  }
+  div.SS_item {
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    min-height: 130px;
+    display: inline-block;
+    zoom:1;/*for IE 5.5-7*/
+  }
+  div.SS_item div.SS_image {
+    float: left;
+    width: 170px;
+  }
+  div.SS_image {
+  }
+  div.SS_image img {
+    padding: 4px;
+    border: 1px solid #CCC;
+  }
+  div.SS_item div.SS_page {
+    float: left;
+    width: 485px;
+    margin-left: 15px;
+    line-height: 1.5em;
+    padding-top: 2px;
+  }
+  div.SS_item div.SS_page div.SS_title {
+    font-size: 125%;
+    margin-bottom: 6px;
+  }
+  div.SS_item div.SS_page div.SS_summary {
+    font-size: 100%;
+  }
+  div.SS_item span.SS_highlight {
+    font-weight: bold;
+  }
+  div.SS_item div.SS_page span.SS_url {
+    color: #006F00;
+  }
+  div.SS_item span.SS_contentType {
+    font-weight: bold;
+  }
+  div.SS_item span.SS_contentLength {
+    display: block;
+    float: left;
+  }
+  div.SS_item span.SS_lastModified {
+    float: left;
+    margin-left: 5px;
+  }
+  
+  /* === Paging === */
+  
+  div.SS_paging {
+    margin: 10px 0px 2px 0px;
+    clear: left;
+  }
+  div.SS_paging b.SS_selectPage {
+    border: 1px solid #EEE;
+    background-color: #FAFAFA;
+    padding: 1px 7px 1px 7px;
+    width: 20px;
+    position:relative; /* for IE bug */
+  }
+  div.SS_paging span.SS_numberPage {
+    border: 1px solid #EEE;
+    padding: 1px 7px 1px 7px;
+    width: 20px;
+    position:relative; /* for IE bug */
+  }
+  
+  /* === NotFound === */
+  
+  div#SS_notFound {
+    font-size: 100%;
+    margin: 15px 0px 15px 20px;
+  }
+  div#SS_notFound #SS_hint {
+    margin: 15px 0px 0px 5px;
+  }
+  div#SS_notFound ul#SS_hintMessage {
+    margin-top: 0;
+    margin-left: 25px;
+  }
+  
+  /* === Preview === */
+  
+  div#SS_preview {
+    position: absolute;
+    z-index: 100;
+    width: 436px;
+    height: 336px;
+    background: url(https://image.syncsearch.jp/image/preview.gif) no-repeat 0 0; 
+    display: none;
+  }
+  div#SS_previewContainer {
+    width: 407px;
+    height: 307px;
+    margin: 16px 0px 0px 16px;
+    background: url(https://image.syncsearch.jp/image/shadow.png) no-repeat 0 0;
+  }
+  img#SS_previewImage {
+    border: 1px solid #CCCCCC;
+  }
+  
+  /* === Suggest === */
+  
+  input.SS_searchQuery {
+    ime-mode : active;
+  }
+  div.SS_suggest {
+    font-weight: normal;
+    z-index: 9;
+    display: none;
+    position: absolute;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    width: 232px;
+  }
+  div.SS_suggest div.SS_suggestItemOff { 
+    background-color: #FFF;
+    border-top: 1px solid #CCC;	
+    padding: 1px 2px 1px 4px;
+  }
+  div.SS_suggest div.SS_suggestItemOn {
+    background-color: #ECF5FA;
+    border-top: 1px solid #CCC;	
+    padding: 1px 2px 1px 4px;
+  }
+  div.SS_suggest span.SS_suggestKey {
+    font-size: 100%;
+    padding-left: 4px;
+  }
+  div.SS_suggest span.SS_suggestRate {
+    width: 100px;
+  }
+  
+  /* --------------------------------------------------------------------------------------
+   基本設定
+  --------------------------------------------------------------------------------------- */
+  
+  /* 基本フォント -------------------- */
+  
+  body {
+      color: #333333;
+      font-family: Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      font-size: 12px;
+      line-height: 1.4em;
+  }
+  
+  input,select,textarea,form {
+      color: #666666;
+      font-family: Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  
+  h1,h2,h3,h4,h5,h6 {
+      font-size: 100%;
+  }
+  
+  * html body {
+      font-size: 75%;
+  }
+  *:first-child+html body {
+      font-size: 75%;
+  }
+  
+  
+  /* 基本タグ -------------------- */
+  
+  body,div,
+  h1,h2,h3,h4,h5,h6,
+  dl,dt,dd,ul,ol,li,
+  p,blockquote,pre,cite,code,caption,
+  form,fieldset,legend,input,textarea,select,option,label {
+      margin: 0px;
+      padding: 0px;
+  }
+  
+  
+  /* --------------------------------------------------------------------------------------
+   レイアウト枠
+  --------------------------------------------------------------------------------------- */
+  
+  div#contents {
+      width: 902px;
+      margin: 0 auto;
+      text-align: left;
+      z-index: 1;
+  }
+  
+  div#ct {
+      width: 902px;
+      padding-bottom: 20px;
+      /* border-bottom: 3px solid #E8E8E8; */
+  }
+  
+  div#ct02 {
+      width: 902px;
+  }
+  
+  div#ct-in {
+      margin: 0 1px;
+  }
+  
+  div#ct-left {
+      float: left;
+      width: 690px;
+  }
+  
+  div#column-right {
+      float: right;
+      width: 200px;
+  }
+  
+  div#ct:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+  div#ct { display:inline-block; }
+  /*\*/
+  * html div#ct { height:1%; }
+  div#ct { display:block; }
+  /**/
+  
+  div#ct02:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+  div#ct02 { display:inline-block; }
+  /*\*/
+  * html div#ct02 { height:1%; }
+  div#ct02 { display:block; }
+  /**/
+  /* --------------------------------------------------------------------------------------
+   サイドナビ
+  --------------------------------------------------------------------------------------- */
+  
+  
+  /* サイドナビタイトル -------------------- */
+  
+  div#column-right .bg {
+      background: #4F90C9 url(https://www.iodata.jp/img/share/bg_sidenavi_tp.gif) no-repeat;
+  }
+  
+  div#column-right p.bg {
+      margin-top: 10px;
+  }
+  
+  div#column-right .bg span {
+      display: block;
+      padding: 3px 12px;
+      background: url(https://www.iodata.jp/img/share/bg_sidenavi_bt.gif) no-repeat left bottom;
+      color: #FFFFFF;
+      font-weight: bold;
+  }
+  
+  div#column-rightt .bg span img.img-left {
+      float: left;
+      margin-right: 4px;
+  }
+  
+  div#column-right .bg span span {
+      display: inline;
+      padding: 0;
+      color: #E0EEFF;
+      font-size: 86%;
+      font-weight: normal;
+      line-height:1.3em;
+      background: none;
+  }
+  
+  /* --------------------------------------------------------------------------------------
+   ボックス
+  --------------------------------------------------------------------------------------- */
+  
+  div.section {
+      width: 666px;
+      margin: 0 12px 30px;
+  }
+  
+  div.section02 {
+      width: 666px;
+      margin: 0 12px 15px;
+  }
+  
+  
+  /* テキストボールド -------------------- */
+  
+  div.section em,
+  div.section02 em {
+      font-weight: bold;
+  }
+  
+  
+  /* 右寄せ -------------------- */
+  
+  div.section .t-right,
+  div.section02 .t-right {
+      text-align: right;
+  }
+  
+  
+  
+  /* スペース -------------------- */
+  
+  .sec-spc {
+      padding-top: 16px;
+  }
+  
+  .sec-spc02 {
+      margin-top: 16px;
+  }
+  
+  
+  
+  /* 画像 -------------------- */
+  
+  div.section img.mail,
+  div.section02 img.mail {
+      margin: 0 2px -2px 2px;
+  }
+  
+  
+  /* --------------------------------------------------------------------------------------
+   テキスト
+  --------------------------------------------------------------------------------------- */
+  
+  /* トップテキスト -------------------- */
+  
+  p.toptxt {
+      padding-bottom: 25px;
+  }
+  
+  
+  /* インデント -------------------- */
+  
+  .ind {
+      padding-left: 1em;
+      text-indent: -1em;
+  }
+  
+  .ind02 {
+      padding-left: 0.5em;
+      text-indent: -0.5em;
+  }
+  
+  
+  /* フォントサイズ -------------------- */
+  
+  .t-small {
+      font-size: 86%;
+      line-height: 1.5em;
+  }
+  
+  
+  /* ブランクマークリンク -------------------- */
+  
+  .ex-link {
+      padding-left: 20px;
+      background: url(https://www.iodata.jp/img/share/icon_link.gif) no-repeat 0 0.3em;
+  }
+  .ex-link a:link,
+  .ex-link a:visited,
+  .ex-link a:hover,
+  .ex-link a:active {
+      color: #4F9BD8;
+  }
+  
+  
+  /* アローリンク -------------------- */
+  
+  .arw-link {
+      padding-left: 15px;
+      background: url(https://www.iodata.jp/img/share/icon_arrow.gif) no-repeat 0 0.5em;
+  }
+  .arw-link a:link,
+  .arw-link a:visited,
+  .arw-link a:hover,
+  .arw-link a:active {
+      color: #4F9BD8;
+  }
+  
+  .arw-link02 {
+      padding-left: 15px;
+      background: url(https://www.iodata.jp/img/share/icon_arrow03.gif) no-repeat 0 0.5em;
+  }
+  
+  
+  
+  /* ナンバー付リスト インデント -(x)- -------------------- */
+  
+  ul.num-list li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+  }
+  
+  ul.num-list02 li {
+      padding-left: 2.0em;
+      text-indent: -2.0em;
+  }
+  
+  ul.num-list02 li em {
+      font-weight: bold;
+  }
+  
+  /* サイドナビ -------------------- */
+  
+  dl.snavi {
+      width: 200px;
+      background: url(https://www.iodata.jp/img/share/bg_snavi_rp.gif) repeat-y;
+      line-height: 1.5em;
+  }
+  
+  dl.snavi-sp {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  dl.snavi dd {
+      width: 198px;
+      padding: 0 1px;
+      background: url(https://www.iodata.jp/img/share/bg_snavi_bt.gif) no-repeat left bottom;
+  }
+  
+  dl.snavi dd ul li ul {
+      margin-top: 6px;
+      border-top: 1px solid #E1E1E1;
+  }
+  
+  dl.snavi dd ul li {
+      padding: 7px 0 6px;
+      border-bottom: 1px solid #E1E1E1;
+      list-style: none;
+  }
+  
+  dl.snavi dd ul li ul {
+      background: #FFFFFF;
+      font-weight: normal;
+  }
+  
+  dl.snavi dd ul li ul li {
+      background: url(https://www.iodata.jp/img/share/line_dot_gray.gif) repeat-x left bottom;
+      border-bottom: none;
+  }
+  
+  dl.snavi dd ul li.noline {
+      border-bottom: none;
+  }
+  
+  dl.snavi dd ul li ul li.noline {
+      padding-bottom: 0;
+      background: none;
+  }
+  
+  dl.snavi dd ul li a {
+      padding-left: 29px;
+      background: url(https://www.iodata.jp/img/share/icon_arrow.gif) no-repeat 12px .2em;
+  }
+  
+  dl.snavi dd ul li.t-small a {
+      background: url(https://www.iodata.jp/img/share/icon_arrow.gif) no-repeat 12px .1em;
+  }
+  
+  dl.snavi dd ul li ul li a {
+      padding-left: 0;
+      background: none;
+  }
+  
+  dl.snavi dd ul li ul li span {
+      display: block;
+      width: 139px;
+      padding: 0 15px 0 44px;
+      background: url(https://www.iodata.jp/img/share/icon_arrow02.gif) no-repeat 28px .3em;
+  }
+  
+  dl.snavi dd ul li ul li span.ex-link {
+      padding: 0 15px 0 44px;
+      background: url(https://www.iodata.jp/img/share/icon_link02.gif) no-repeat 28px .3em;
+  }
+  
+  dl.snavi dd ul li ul li span.ex-link a:link,
+  dl.snavi dd ul li ul li span.ex-link a:visited,
+  dl.snavi dd ul li ul li span.ex-link a:active,
+  dl.snavi dd ul li ul li span.ex-link a:hover {
+      color: #666666;
+  }
+  
+  dl.snavi dd ul li span.menu-ind {
+      display: block;
+      width: 139px;
+      padding-left: 29px;
+      background: url(https://www.iodata.jp/img/share/icon_arrow.gif) no-repeat 12px .3em;
+  }
+  
+  dl.snavi dd ul li span.menu-ind a {
+      padding-left: 0px;
+      background: none;
+  }
+  /* 現在地表示 */
+  
+  
+  dl.snavi dd ul li.on {
+      background: #EDF4F9;
+      font-weight: bold;
+  }
+  
+  dl.snavi dd ul li.ontp {
+      padding-bottom: 0;
+      background: #EDF4F9;
+      font-weight: bold;
+  }
+  
+  dl.snavi dd ul li.ontp ul {
+      padding-bottom: 6px;
+  }
+  
+  dl.snavi dd ul li ul li.on {
+      background: #EDF4F9 url(https://www.iodata.jp/img/share/line_dot_gray.gif) repeat-x left bottom;
+  }
+  
+  dl.snavi dd ul li ul li.onbt {
+      margin-bottom: -6px;
+      background: #EDF4F9;
+      font-weight: bold;
+  }
+  
+  * html dl.snavi dd ul li ul li.onbt {
+      border-bottom: 1px solid #E1E1E1;
+  }
+  
+  dl.snavi dd ul li.onbg {
+      font-weight: bold;
+  
+      border-bottom: none;
+      background: #EDF4F9 url(https://www.iodata.jp/img/share/bg_snavi_bt_on.gif) no-repeat left bottom;
+  }
+  
+  
+  
+  

@@ -1,0 +1,158 @@
+<div id="contentsMain" class={{css_name}}>
+	<!-- ===== Content ===== Start -->
+	<!-- pageTtl -->
+		<div id="pageTtl" class="cClear clearfix ttlBtn"> <h1>{{title}}</h1>
+	</div>
+	<div id="linkBtn">
+		<a href="/product/hdd/bizhdd/" class="btn">▶　法人向けHDD／SSD（BizDAS）ラインアップはこちら</a>
+	</div>
+	<!-- listAreaAnc -->
+	<div id="listAreaAnc">
+		<ul class="list-pagelink">
+			{% for key, product_area in product_area_data %}
+				<li>
+					<a href="#{{key}}">{{product_area}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<!-- /listAreaAnc -->
+	<!-- listArea -->
+	<div id="listArea">
+		{% for group_product in group_products %}
+			<div>
+				<h2 id="{{group_product['product_area_key']}}">
+					<span>{{group_product['product_area_label']}}</span>
+				</h2>
+				<!-- box-product -->
+				{% if group_product['products'] %}
+					{% for product in group_product['products'] %}
+						<div class="box-product">
+							<dl class="title">
+								<dt>
+									<a href="{{product.url_redirect}}">{{product.field_product_name.value}}</a>
+								</dt>
+							</dl>
+							<div class="box-productType02 clearfix">
+								<div class="box-productType02Photo">
+									<a href="{{product.url_redirect}}"><img src="{{ file_url(product.field_main_image.entity.field_media_image.entity.uri.value) }}"></a>
+								</div>
+								<div class="box-productType02Right">
+									<div class="box-productType02Outline clearfix">
+										<p>{{product.field_note.value}}</p>
+										<ul>
+											{% if product.field_quantity.value and product.field_quantity.value > 0 %}
+												<li>
+													<a href="https://www.ioplaza.jp/shop/g/g1000-01637351-00000002" target="_blank" onclick="var s=s_gi(s_account);s.linkTrackVars='events';s.linkTrackEvents='event12';s.events='event12';s.tl(this,'o','link top ioplaza');" class="linkBtn gaEcLink_st"><img src="/sites/default/files/2025-04/btn_buynow.gif" alt="ご購入はこちら" width="97" height="31"></a>
+												</li>
+											{% endif %}
+											<li>
+												<a href="{{product.url_redirect}}" class="linkBtn"><img width="97" height="31" src="/sites/default/files/2025-04/btn_product_more.png" alt="詳しく見る"></a>
+											</li>
+										</ul>
+									</div>
+									<div class="box-productType02Free">
+										<img alt="" src="{{ file_url(product.field_product_image[0].entity.field_media_image.entity.uri.value)}}">
+									</div>
+
+									<div class="box-productType02Table">
+
+										<div class="table">
+											<table width="300" border="0" cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<th>型番</th>
+														<th>仕様</th>
+														<th>価格</th>
+													</tr>
+													{% for field_table_model in product.field_table_model %}
+														{% set table_model = field_table_model.entity %}
+														<tr>
+															<td>
+																<a href="hdcz-utl">{{table_model.field_model.value}}</a>
+																&ensp;</td>
+															<td>{{table_model.field_specification.value}}
+																&ensp;
+																<img src="/sites/default/files/2025-04/icon_green.gif" alt="グリーン購入法" width="13" height="13"></td>
+															{% if table_model.field_price.value %}
+																<td class="number">{{table_model.field_price.value }}<br><font size="1">（税抜￥{{ table_model.field_price.value / 110 * 10}}）</font>
+																	&ensp;</td>
+															{% else %}
+																<td class="number">
+																	<b>オープン価格</b>
+																</td>
+															{% endif %}
+														</tr>
+													{% endfor %}
+												</tbody>
+											</table>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		{% endfor %}
+		<!-- //box-product -->
+		<!-- 生産終了品取得 -->
+		<div class="paragraph">
+			<div class="pagetop">
+				<p class="btm-small">
+					<a href="#head">このページのトップへ</a>
+				</p>
+			</div>
+		</div>
+		<!-- //生産終了品取得 -->
+
+		<!-- /listArea -->
+	</div>
+
+	<div id="listArea">
+		<ul class="product-attention btm-small">
+			<li>※価格は、消費税別のメーカー希望小売価格です。<a href="/explain.htm">
+					[価格表記について]</a>
+			</li>
+			<li>※オープン価格商品の販売価格は、販売店にお問い合わせいただくか、直販サイト<a onclick="var s=s_gi(s_account);s.linkTrackVars='events';s.linkTrackEvents='event12';s.events='event12';s.tl(this,'o','link top ioplaza');" href="https://www.ioplaza.jp/index.htm" target="_blank">「ioPLAZA」</a>にてご確認ください。</li>
+			<li><img alt="店頭在庫限り" src="https://www.iodata.jp/common/img_v2/icon_limit.gif" width="13" height="13">...店頭在庫限り　／
+				<img alt="生産終了" src="https://www.iodata.jp/common/img_v2/icon_close.gif" width="13" height="13">...生産終了品　／
+				<img src="https://www.iodata.jp/image/icon_green.gif" alt="グリーン購入法">...<a href="/company/environment/green/">グリーン購入法</a>適合品</li>
+		</ul>
+		<!-- 生産終了品取得 -->
+		<div class="paragraph">
+			<p class="caption">
+				<a href="/product/discon/index.php">掲載されていない旧商品はこちらから検索できます</a>
+			</p>
+		</div>
+	</div>
+	<!-- //生産終了品取得 -->
+	<!-- ===== Content ===== End   -->
+</div>
+<div
+	id="contentsSide">
+	<!-- Class:SideNavi(1-5) Start -->
+	<dl class="toggle-set" id="localMenu">
+
+		<dt>
+			<span>
+				<a href="{{parent_term.parent_term_url}}">
+					{{parent_term.label}}
+				</a>
+			</span>
+		</dt>
+		<dd class="toggle-box">
+			<ul>
+				{% for child_term in child_terms %}
+					<li>
+						<span>
+							<a href="{{child_term.child_term_url}}">{{child_term.label}}</a>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	</dl>
+</div>

@@ -1,0 +1,640 @@
+li a {
+	text-decoration: none !important;
+}
+
+.subtitle {
+	margin-top: 35px;
+	padding: 10px 12px 7px 12px;
+	border-top: 3px solid #001eaa;
+	border-bottom: 1px solid #999;
+	font-size: 18px;
+	color: #001eaa;
+	background: none;
+}
+
+.box-category {
+	clear: both;
+	padding: 20px 0;
+}
+
+.box-category a:hover img {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.box-category ul li.categoryListBox {
+	width: 226px;
+	float: left;
+	padding-right: 22px;
+}
+
+.box-category ul li.categoryListBox:nth-child(4n) {
+	padding-right: 0px;
+}
+
+.box-category ul li a {
+	display: block;
+	border-bottom: 1px dotted #000;
+}
+
+.box-category ul li a img {
+	vertical-align: bottom;
+}
+
+ul li {
+	list-style: none;
+}
+
+.box-category ul li ul {
+	padding: 5px 0 20px 0;
+}
+
+.box-category ul li ul li {
+	width: 226px;
+	padding: 5px 0 0 0;
+	float: none;
+}
+
+.box-category ul li ul li a {
+	display: block;
+	padding: 0 0 0 13px;
+	margin: 0 5px;
+	border-bottom: none;
+	background: url(/sites/default/files/2025-04/arw_black_small.png) no-repeat left 4px;
+	line-height: 1.4;
+	color: #4f9bd8;
+	text-decoration: none;
+}
+
+#listAreaAnc {
+	clear: both;
+	width: 100%;
+	margin-top: 35px;
+}
+
+#listAreaAnc ul.list-pagelink {
+	clear: both;
+	width: 100% !important;
+	margin: 0px;
+}
+
+ul.list-pagelink:after {
+	content: "";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+}
+
+ul.list-pagelink li {
+	float: none;
+	margin-right: 25px;
+	display: inline-block;
+}
+
+ul.list-pagelink li a {
+	display: block;
+	padding: 8px 0 5px 20px;
+	background: url(/sites/default/files/2025-04/arw_anc.png) no-repeat left center;
+	/*white-space: nowrap;*/
+	color: #666 !important;
+}
+
+ol,
+ul {
+	padding-left: 0px !important;
+}
+
+/* Product Category */
+
+body div#pageTtl,
+#contentsMain #pageTtl {
+	margin-bottom: 35px;
+}
+
+body div#pageTtl h1,
+#contentsMain #pageTtl h1 {
+	padding: 20px 0 17px 19px;
+	border-left: 1px solid #000;
+	font-size: 28px;
+	font-weight: normal;
+	color: #000;
+	margin: 0;
+	background: none;
+	line-height: 1.5 !important;
+}
+
+#contentsMain #listArea div h2 {
+	margin-top: 35px !important;
+	padding: 10px 12px 7px 12px !important;
+	border-top: 3px solid #000 !important;
+	border-bottom: 1px solid #999 !important;
+	font-size: 18px !important;
+	color: #000 !important;
+	background: none !important;
+	font-weight: normal !important;
+	background-color: #eee !important;
+}
+
+#contentsMain #pageTtl.ttlBtn h1 {
+	display: inline-block;
+	float: left;
+}
+
+#contentsMain {
+	max-width: 676px;
+	float: left;
+	padding: 35px 0 60px;
+}
+
+div#linkBtn a.btn {
+	display: block;
+	font-weight: bold;
+	color: #ffff;
+	text-decoration: none;
+	padding: 10px;
+	text-align: center;
+	background: none;
+	background-color: #e48100;
+	border-radius: 5px;
+	max-width: 450px;
+	line-height: 1.6;
+}
+
+#listArea {
+	clear: both;
+	margin-top: 35px;
+}
+
+#listArea div.box-product {
+	width: 676px;
+	margin: 10px 0;
+	line-height: 1.4;
+}
+
+#listArea div.box-product dl.title {
+	background: url(/sites/default/files/2025-04/ttl_bg_dot_grade.png) repeat-x left bottom;
+}
+
+#listArea div.box-product dl.title a {
+	padding: 10px 15px 10px 40px;
+	background: url(/sites/default/files/2025-04/arw_blue_large.png) no-repeat 8px 8px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #001eaa;
+	display: block;
+	line-height: 1.2;
+}
+
+#listArea div.box-product:after,
+div.box-product dl.title:after {
+	content: "";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+}
+
+#listArea div.box-product p.img {
+	float: left;
+	margin: 0;
+	padding: 15px 0;
+	width: 100px;
+}
+
+#listArea div.box-product p.img img {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+#listArea div.box-product p.img a.linkBtn {
+	border: none;
+	padding: 5px 5px 0 5px;
+	width: 100px;
+	text-align: center;
+	display: block;
+}
+
+#listArea div.box-product p.img a.linkBtn img {
+	border: none;
+	padding: 0;
+}
+
+#listArea div.box-product dl.content {
+	float: left;
+	display: inline;
+	margin: 15px 0 0 25px;
+	width: 220px;
+}
+
+#listArea div.box-product dl.content ul li {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#listArea div.box-product dl.content dt {
+	font-weight: bodl;
+	margin-bottom: 15px;
+}
+
+#listArea div.box-product div.table {
+	float: right;
+	width: 325px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+#listArea div.box-product div.table table {
+	margin: 15px 0 15px 0;
+	width: 324px;
+}
+
+#listArea div.box-product table img {
+	vertical-align: middle;
+}
+
+#contentsMain #listArea div.box-product table th {
+	background: #666;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #999;
+	text-align: center;
+	color: #FFF;
+	font-size: 86%;
+	padding: 3px;
+}
+
+#contentsMain #listArea div.box-product table th:first-child {
+	border-left: none;
+}
+
+#contentsMain #listArea div.box-product table td {
+	border-left: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding: 7px 3px;
+}
+
+#contentsMain #listArea div.box-product table tr td:first-child {
+	border-left: none;
+}
+
+#contentsMain #listArea div.box-product table td.caption {
+	background: #F5F5F5;
+}
+
+#contentsMain #listArea div.box-product table td a {
+	color: #4F9BD8;
+}
+
+#listArea div.box-product dl.content ul:after {
+	content: "";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+}
+
+#listArea div.box-product dl.content ul {
+	display: inline-block;
+}
+
+#listArea div.box-product dl.content ul {
+	display: block;
+}
+
+#contentsMain #listArea ul.inline {
+	margin: 0;
+	font-size: 86%;
+}
+
+ul.inline li {
+	display: inline;
+	margin-right: 15px;
+}
+
+ul.inline li a {
+	white-space: nowrap;
+	color: #4F9BD8;
+}
+
+#contentsMain #listArea p.caption {
+	border-top: 1px dotted #999;
+	padding: 10px 0 10px 20px;
+	background: url(/shared/img/arw_black.png) no-repeat left 13px;
+}
+
+#contentsMain #listArea p.caption a {
+	color: #666;
+}
+
+#contentsMain #listArea .pagetop {
+	border-top: 1px dotted #999;
+	padding: 10px 20px 10px 0;
+	background: url(/shared/img/arw_pagetop.png) no-repeat right 12px;
+	text-align: right;
+}
+
+#contentsMain #listArea .pagetop a {
+	color: #666;
+}
+
+#contentsMain #listArea .paragraph table {
+	border-top: 1px dotted #999;
+	width: 100%;
+}
+
+#contentsMain #listArea .paragraph table th {
+	padding: 10px;
+	background: #f0f0f0;
+	width: 6em;
+	text-align: center;
+}
+
+#contentsMain #listArea .paragraph table td {
+	padding: 10px;
+}
+
+/* List Layout Type02
+-------------------------------------------------------------*/
+#listArea div.box-product div.box-productType02 {
+	width: 676px;
+	clear: both;
+	padding: 15px 0;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Photo {
+	width: 200px;
+	float: left;
+	border: 1px solid #999;
+	box-sizing: content-box;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Photo img {
+	width: 200px;
+	height: auto;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Right {
+	width: 442px;
+	float: right;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Outline {
+	width: 442px;
+	clear: both;
+	background: url(/shared/img/bg_line_dotX_2px.png) repeat-x left bottom;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Outline ul {
+	width: 200px;
+	float: right;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Outline ul li {
+	width: 100px;
+	float: left;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Outline p {
+	width: 235px;
+	float: left;
+	padding-bottom: 15px;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Free {
+	padding: 15px 0;
+	clear: both;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Free img {
+	max-width: 100%;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Table {
+	clear: both;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Table .table {
+	width: 100% !important;
+}
+
+#listArea div.box-product div.box-productType02 div.box-productType02Table .table table {
+	width: 100% !important;
+}
+
+#listArea div.box-product div.table {
+	float: right;
+	width: 325px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+#listArea div.box-product div.table table {
+	margin: 15px 0 15px 0;
+	width: 324px;
+}
+
+#listArea div.box-product table img {
+	vertical-align: middle;
+}
+
+#contentsMain #listArea div.box-product table th {
+	background: #666;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #999;
+	text-align: center;
+	color: #FFF;
+	font-size: 86%;
+	padding: 3px;
+}
+
+#contentsMain #listArea div.box-product table th:first-child {
+	border-left: none;
+}
+
+#contentsMain #listArea div.box-product table td {
+	border-left: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding: 7px 3px;
+}
+
+#contentsMain #listArea div.box-product table tr td:first-child {
+	border-left: none;
+}
+
+#contentsMain #listArea div.box-product table td.caption {
+	background: #F5F5F5;
+}
+
+#contentsMain #listArea div.box-product table td a {
+	color: #4F9BD8;
+}
+
+#contentsSide {
+	width: 240px;
+	float: right;
+	padding: 35px 0 60px;
+}
+
+#contentsSide div {
+	margin-top: 5px !important;
+	margin-bottom: 0px !important;
+}
+
+#contentsSide #localMenu {
+	margin-bottom: 25px;
+}
+
+#contentsSide #localMenu dt {
+	padding: 8px 13px;
+	background: #e5e5e5;
+}
+
+#contentsSide #localMenu dt span.ttlLinkNon,
+#contentsSide #localMenu dt a {
+	padding: 9px 13px 6px 13px;
+	display: block;
+	font-size: 16px;
+	color: #333;
+	background: url(/sites/default/files/2025-04/lm_bg_ttl.png) no-repeat left center;
+	margin: 0;
+}
+
+#contentsSide #localMenu .subTtl {
+	margin: 0;
+	padding: 9px 8px 7px 8px;
+	border-top: 2px solid #001eaa;
+	border-bottom: 1px dotted #333;
+	font-size: 15px;
+	color: #001eaa;
+}
+
+#contentsSide #localMenu .subTtl span {
+	display: block;
+	padding-left: 21px;
+	background: url(/shared/img/ico_blue.png) no-repeat left 2px;
+}
+
+#contentsSide #localMenu .subTtl a {
+	display: block;
+	padding-left: 21px;
+	background: url(/sites/default/files/2025-04/arw_black_small.png) no-repeat left 2px;
+}
+
+#contentsSide #localMenu dd li {
+	padding-bottom: 1px;
+	border-bottom: 1px dotted #666;
+	font-size: 13px;
+}
+
+#contentsSide #localMenu dd li.lineNone {
+	border-bottom: none;
+}
+
+#contentsSide #localMenu dd li a {
+	padding: 12px 10px 7px 29px;
+	color: #333;
+	position: relative;
+	background-color: #ececec;
+	background-image: -moz-linear-gradient(top, #ffffff, #ececec);
+	background-image: -ms-linear-gradient(top, #ffffff, #ececec);
+	background-image: -o-linear-gradient(top, #ffffff, #ececec);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#ececec));
+	background-image: -webkit-linear-gradient(top, #ffffff, #ececec);
+	background-image: linear-gradient(top, #ffffff, #ececec);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ececec', GradientType=0)";
+	line-height: 1.15;
+	display: block;
+	margin: 0;
+}
+
+#contentsSide #localMenu dd li a:after {
+	content: "";
+	display: block;
+	width: 5px;
+	height: 9px;
+	position: absolute;
+	top: 50%;
+	left: 13px;
+	margin-top: -3px;
+	background: url(/sites/default/files/2025-04/arw_black_small.png) no-repeat left center;
+}
+
+#contentsSide #localMenu dd li.brand a {
+	padding: 0px;
+}
+
+#contentsSide #localMenu dd li.brand a:after {
+	background: none;
+	z-index: -10;
+}
+
+#contentsSide #localMenu li img {
+	margin: 0 auto;
+	vertical-align: bottom;
+}
+
+#contentsSide #localMenu dd #bnrMenu {
+	padding-top: 35px;
+}
+
+#contentsSide #localMenu dd #bnrMenu li {
+	padding-bottom: 10px;
+	border-bottom: none;
+	line-height: 1.5;
+}
+
+#contentsSide #localMenu dd #bnrMenu li.center {
+	text-align: center;
+}
+
+#contentsSide #localMenu dd #bnrMenu li a {
+	padding: 0px;
+	background: none;
+	background-color: none;
+	background-image: none;
+	margin-bottom: 5px;
+}
+
+#contentsSide #localMenu dd #bnrMenu li a:after {
+	background: none;
+	z-index: -10;
+}
+
+#contentsSide #localMenu dd #bnrMenu li.boxBnr a {
+	border: 1px solid #CCC;
+	padding: 12px 10px 7px 29px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #ececec;
+	background-image: -moz-linear-gradient(top, #ffffff, #ececec);
+	background-image: -ms-linear-gradient(top, #ffffff, #ececec);
+	background-image: -o-linear-gradient(top, #ffffff, #ececec);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#ececec));
+	background-image: -webkit-linear-gradient(top, #ffffff, #ececec);
+	background-image: linear-gradient(top, #ffffff, #ececec);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ececec', GradientType=0)";
+}
+
+#contentsSide #localMenu dd #bnrMenu li.boxBnr a:after {
+	content: "";
+	display: block;
+	width: 5px;
+	height: 9px;
+	position: absolute;
+	top: 50%;
+	left: 13px;
+	margin-top: -3px;
+	background: url(/sites/default/files/2025-04/arw_black_small.png) no-repeat left center;
+	z-index: 2;
+}
+
+#contentsSide #localMenu a {
+	text-decoration: none;
+}
+
+#contentsSide #localMenu a:hover {
+	text-decoration: underline;
+}

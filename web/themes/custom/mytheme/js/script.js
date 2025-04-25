@@ -1,1 +1,0 @@
-console.log("MyTheme script loaded!");

@@ -2,11 +2,6 @@
 # /drush/contrib/
 /vendor/
 /private/
-# /web/core/
-# /web/modules/contrib/
-# /web/themes/contrib/
-# /web/profiles/contrib/
-# /web/libraries/
 /node_modules/
 composer.lock
 

@@ -1,0 +1,151 @@
+<div id="SS_container">
+	<div id="ct-left">
+		{% if exposed %}
+			<div class="view-filters">
+				{{ exposed }}
+			</div>
+		{% endif %}
+		{% if attachment_before %}
+			<div class="attachment attachment-before">
+				{{ attachment_before }}
+			</div>
+		{% endif %}
+		{% if rows %}
+			<div class="view-content">
+				<div id="SS_contents">
+					<div id="SS_search1" class="SS_search">
+						<form name="SS_searchForm1" id="SS_searchForm1" class="SS_searchForm" action="/search" method="get">
+							<input type="hidden" name="site" value="12KRJNET" id="SS_site1">
+							<input type="hidden" name="design" value="10" id="SS_design1">
+
+							<input type="hidden" name="group" id="SS_group1" value="0">
+							<input type="hidden" name="charset" value="UTF-8" id="SS_charset1">
+
+							<div id="SS_searchCategory1" class="SS_searchCategory">
+								<input type="checkbox" name="category" value="1" id="SS_category1_1"><label for="SS_category1_1">商品一覧</label>
+								<input type="checkbox" name="category" value="3" id="SS_category1_3"><label for="SS_category1_3">サービス</label>
+								<input type="checkbox" name="category" value="9" id="SS_category1_9"><label for="SS_category1_9">ダウンロード</label>
+								<input type="checkbox" name="category" value="7" id="SS_category1_7"><label for="SS_category1_7">Q&amp;A</label>
+								<input type="checkbox" name="category" value="11" id="SS_category1_11"><label for="SS_category1_11">マニュアル</label>
+								<input type="checkbox" name="category" value="8" id="SS_category1_8"><label for="SS_category1_8">ニュース</label>
+								<input type="checkbox" name="category" value="4" id="SS_category1_4"><label for="SS_category1_4">法人</label>
+								<input type="checkbox" name="category" value="5" id="SS_category1_5"><label for="SS_category1_5">会社案内</label>
+							</div>
+							<!-- /SS_searchCategory1 -->
+
+							<p id="categoryInfo">
+								※カテゴリをチェックして検索すると、検索結果を絞り込むことができます。詳細「<a href="//www.iodata.jp/searchhelp.htm">検索の使い方</a>」</p>
+						</form>
+					</div>
+					<!-- /SS_search -->
+
+
+					<div id="SS_navi">
+						<div id="SS_naviResult">
+							<span id="SS_queryString">
+								<b>「{{key_search}}」</b>の検索結果</span>
+							<span id="SS_totalHits">
+								<b>{{size}}</b>
+								件</span>
+							<span id="SS_showCounts">
+								<b>1</b>
+								～
+								<b>10</b>
+								件目を表示</span>
+						</div>
+
+						<span id="SS_naviSort">
+							<span id="SS_sortMatch">
+								<span id="sortSelected">一致順</span>
+							</span>
+							<span id="SS_sortDate">
+								<a href="/search?query=HDD&amp;site=12KRJNET&amp;charset=UTF-8&amp;design=10&amp;product=0&amp;submit.x=33&amp;submit.y=29&amp;sort=date" id="SS_sortDateLink">日付順</a>
+							</span>
+						</span>
+					</div>
+					<!-- /SS_navi -->
+
+
+					<div id="SS_result">
+						{% for product in data_search %}
+							<div class="SS_item">
+								<div class="SS_image">
+									<a href="{{product.url_redirect}}"><img src="{{ file_url(product.field_product_image[0].entity.field_media_image.entity.uri.value)}}" id="SS_thumnail_1" width="160" height="120"></a>
+								</div>
+								<div class="SS_page">
+									<div class="SS_title">
+										<a href="{{product.url_redirect}}">
+											<span class="SS_highlight">{{product.field_product_name.value}}</a>
+										</div>
+										<div class="SS_summary">
+											ブラック
+											{% for field_table_model in product.field_table_model %}
+												{% set table_model = field_table_model.entity %}
+												<span class="SS_highlight">{{table_model.field_model.value}}</span>
+												{{table_model.field_jan_code.value ? table_model.field_jan_code.value : "" }}
+												{{table_model.field_specification.value}}
+												{{table_model.field_price.value ? table_model.field_price.value : "" }}
+											{% endfor %}
+											<div class="SS_url">
+												<a href="{{product.url_redirect}}">https://drupal-site.ddev.site{{product.url_redirect}}</a>
+											</div>
+										</div>
+										<!-- /SS_page -->
+									</div>
+									<!-- /SS_item -->
+								</div>
+							{% endfor %}
+							<!-- /SS_result -->
+						</div>
+
+					</div>
+				</div>
+			</div>
+		{% elseif empty %}
+			<div class="view-empty">
+				{{ empty }}
+			</div>
+		{% endif %}
+
+		{% if pager %}
+			{{ pager }}
+		{% endif %}
+	</div>
+	<div id="column-right">
+		<dl class="snavi">
+			<dt>
+				<a href="https://www.iodata.jp/product/"><img src="https://www.iodata.jp/img/share/footer/title_snaviproduct.gif" alt="商品一覧" width="200" height="27"></a>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="menu-ind">
+							<a href="https://www.iodata.jp/product/hdd/">HDD（ハードディスク）／SSD</a>
+						</span>
+					</li>
+					<li>
+						<a href="https://www.iodata.jp/product/nas/">NAS（ネットワークHDD）</a>
+					</li>
+					<li>
+						<span class="menu-ind">
+							<a href="https://www.iodata.jp/product/lcd/">液晶ディスプレイ／電子黒板</a>
+						</span>
+					</li>
+					<li>
+						<span class="menu-ind">
+							<a href="https://www.iodata.jp/product/audio/">オーディオ関連（CDレコ・fidata）</a>
+						</span>
+					</li>
+					<li>
+						<a href="https://www.iodata.jp/product/pc/">Web会議／サイネージ関連</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</div>
+  {% if footer %}
+    <div class="view-footer">
+     
+    </div>
+  {% endif %}

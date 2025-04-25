@@ -1,0 +1,24 @@
+<h2 class="subtitle small">
+	<span>商品カテゴリー一覧</span>
+</h2>
+<div class="box-category heightLineParent clearfix">
+	<ul class="categoryListBox" id="productCategory">
+		{% for term in rows['#term'] %}
+			<div class="test">
+				<li class="categoryListBox" style="min-height: 242px;">
+					<a href="{{term.url_redirect}}">
+						<img src="{{ file_url(term.field_icon.entity.field_media_image.entity.uri.value) }}">
+					</a>
+					<ul>
+						{% for term_child in term.children %}
+							<li>
+								<a href="{{term_child.url_redirect}}">
+									{{term_child.name.value}}
+								</a>
+							</li>
+						{% endfor %}
+						<ul></li>
+					</div>
+				{% endfor %}
+			</ul>
+		</div>

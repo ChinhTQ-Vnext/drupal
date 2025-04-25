@@ -1,0 +1,112 @@
+<div id="contentsMain">
+	<!-- ===== Content ===== Start -->
+	<!-- pageTtl -->
+	<!-- main-area -->
+		<div id="main-area"> <div id="main-visual">
+			<div id="hero" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					{% for key, carousel in carousels %}
+						<div class="carousel-item {{key == 0 ? 'active' : ''}}">
+							<a href="{{carousel['url']}}">
+								<img src="{{ file_url(carousel['image'].field_media_image.entity.uri.value) }}">
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+
+		<div id="device">
+			<h2>商品を探す</h2>
+			<div class="clearfix" id="deviceArea">
+				<div class="clearfix" id="deviceAreaLeft">
+					<ul>
+						<li>
+							<a href="/product/"><img height="68" width="68" src="/sites/default/files/2025-04/ico_digital_2015.png" alt="商品カテゴリー">商品一覧から探す</a>
+						</li>
+						<li>
+							<a href="/product/brand_list.htm"><img height="68" width="68" src="/sites/default/files/2025-04/ico_brand_2015.png" alt="商品ブランド">商品ブランドから探す</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="/product/service_list.htm"><img height="68" width="68" src="/sites/default/files/2025-04/ico_solutions_2015.png" alt="サービス一覧から探す">サービス一覧から探す</a>
+						</li>
+						<li>
+							<a href="/product/use_list.htm"><img src="/sites/default/files/2025-04/ico_use_2015.png" alt="用途から探す" width="68" height="68">用途から探す</a>
+						</li>
+					</ul>
+					<ul class="side">
+						<li>
+							<a href="/pio/pc.htm"><img height="68" width="68" src="/sites/default/files/2025-04/ico_kiki_2015.png" alt="お使いの機器から探す">お使いの機器から探す</a>
+						</li>
+						<li>
+							<a href="/pio/#list1"><img height="68" width="68" src="/sites/default/files/2025-04/ico_sp_2015.png" alt="OS別・商品別対応情報">機器・OS対応別で探す</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div
+			id="bottomArea" class="clearfix">
+			<!-- ===== Content ===== Start -->
+			<div id="newsArea">
+				<div
+					id="newsAreaInner" class="news">
+					<!-- newsInfo -->
+					<div class="ttlArea" id="newsInfoTtl">
+						<h2>新商品情報・ニュース</h2>
+						<div class="icnBox"><img width="21" height="20" alt="" src="/sites/default/files/2025-04/icn_news.png"></div>
+					</div>
+					<!-- /newsInfo -->
+
+					<!-- importantInfo -->
+					<div class="ttlArea" id="importantInfoTtl">
+						<h2>重要なお知らせ</h2>
+						<div class="icnBox"><img width="21" height="20" alt="" src="/sites/default/files/2025-04/ico_important_bl.png"></div>
+					</div>
+					<!-- /importantInfo -->
+				</div>
+				<!-- /irInfo -->
+			</div>
+			<!-- /newsArea -->
+			<!-- ===== Content ===== End   -->
+			<div
+				class="sideArea">
+				<!-- Class:SideNavi(1-5) Start -->
+				<div id="pickup">
+					<h2 id="pickupTtl">Pick Up</h2>
+					<div id="pickupInner">
+						<div id="pickupSlide">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper pickup-swiper" style="height: 570px;">
+								<div class="swiper-wrapper">
+									{% for key, pick_up in pick_ups %}
+										<div class="swiper-slide">
+											<a href="{{ pick_up['url'] }}">
+												<img src="{{ file_url(pick_up['image'].field_media_image.entity.uri.value) }}" alt="Pick Up {{ key + 1 }}">
+											</a>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+				<p class="alignR pT10">
+					<a class="arw" href="/ssp/"><img width="15" height="15" alt="" src="/sites/default/files/2025-04/next.png">特集一覧はこちら</a>
+				</p>
+				<!-- Class:SideNavi(1-5) End   -->
+			</div>
+		</div>
+	</div>
