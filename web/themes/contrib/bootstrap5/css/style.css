@@ -12871,4 +12871,18 @@ code {
   overflow-y: auto;
 }
 
+ul.dropdown-menu.nav-level-1.show li.nav-item img.menu-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+ul.dropdown-menu.nav-level-1.show li.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+}
+
+
 /*# sourceMappingURL=style.css.map */
