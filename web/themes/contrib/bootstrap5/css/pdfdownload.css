@@ -1,0 +1,1532 @@
+@charset "utf-8";
+/*=============================================================
+ #main
+=============================================================*/
+h3 {
+    font-size: 14px !important;
+}
+
+img {
+    width: -webkit-fill-available;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+#pdfDl main {
+	font: normal normal 14px/1.7 'Noto Sans JP', sans-serif;
+	text-align: center;
+}
+#pdfDl main * {
+	box-sizing: border-box;
+}
+/*=============================================================
+ #pageTtl
+=============================================================*/
+#pdfDl #intro {
+	margin: 30px 0 0;
+	padding: 0 20px;
+}
+#pdfDl #intro #introInner {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 0 30px;
+}
+#pdfDl #intro #pageTtl {
+	background: url("/pdfdownload/img/bg_ttl.png") no-repeat center 0;
+}
+#pdfDl #intro #pageTtl h1 {
+	padding: 20px 0 0;
+	font-size: 36px;
+}
+#pdfDl #intro #pageTtl p {
+	padding: 20px 0 0;
+	font-size: 16px;
+}
+#pdfDl #intro #pageCatalogBtn {
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+}
+#pdfDl #intro #pageCatalogBtn a {
+	display: inline-block;
+	padding: 4px 5px 5px 5px;
+	border: 1px solid #0099cc;
+	border-radius: 5px;
+	color: #0099cc;
+	font-weight: 700;
+}
+#pdfDl #intro #pageCatalogBtn a img {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-top;
+	margin: 3px 5px 0 0;
+}
+/*=============================================================
+ #searchArea
+=============================================================*/
+#pdfDl #searchArea {
+	padding: 30px 20px 50px 20px;
+	background-color: #e8e8e8;
+}
+#pdfDl #searchArea input[type="button"], #pdfDl #searchArea input[type="text"], #pdfDl #searchArea input[type="submit"], #pdfDl #searchArea input[type="reset"], #pdfDl #searchArea textarea {
+	outline: none;
+}
+#pdfDl #searchArea input[type="submit"], #pdfDl #searchArea input[type="reset"] {
+	cursor: pointer;
+}
+#pdfDl #searchAreaInner {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-size: 16px;
+}
+#pdfDl #searchAreaInner h2 {
+	padding: 0 0 30px;
+	font-size: 20px;
+}
+#pdfDl #searchAreaInner .boxSearch {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#pdfDl #searchAreaInner .boxSearchInner {
+	width: calc(100% - 103px);
+	display: flex;
+	justify-content: space-between;
+}
+#pdfDl #searchAreaInner .boxSearchInner .boxNum {
+	width: 34%;
+}
+#pdfDl #searchAreaInner .boxSearchInner .boxKeyword {
+	width: 64%;
+}
+#pdfDl #searchAreaInner .boxSearchInner dl {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#pdfDl #searchAreaInner .boxSearchInner dl dt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #666666;
+	color: #fff;
+}
+#pdfDl #searchAreaInner .boxSearchInner .boxNum dt {
+	width: 74px;
+}
+#pdfDl #searchAreaInner .boxSearchInner .boxKeyword dt {
+	width: 114px;
+}
+#pdfDl #searchAreaInner .boxSearchInner dl dd {
+	flex: 1;
+}
+#pdfDl #searchAreaInner .boxSearchInner dl dd input {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border: none;
+}
+#pdfDl #searchAreaInner .btnSearch {
+	width: 83px;
+}
+#pdfDl #searchAreaInner .btnSearch #btnSubmit {
+	width: 83px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	background: url("/pdfdownload/img/btn_search.png") no-repeat center center;
+	background-size: 100% 100%;
+	text-indent: -9999px;
+	border: none;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: all 0.2s;
+}
+#pdfDl #searchAreaInner .btnSearch #btnSubmit:hover {
+	opacity: 0.5;
+}
+/*=============================================================
+ .listKeyward
+=============================================================*/
+#pdfDl .listKeyward {
+	margin: 20px 0 0;
+	font-size: 14px;
+}
+#pdfDl .listKeyward dl {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#pdfDl .listKeyward dl dt {
+	width: 210px;
+	text-align: center;
+	padding: 8px 0;
+	background-color: #0099cc;
+	border-radius: 5px;
+	position: relative;
+	color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#pdfDl .listKeyward dl dt:after {
+	content: "";
+	width: 15px;
+	height: 20px;
+	background: url("/pdfdownload/img/arw_keyword.png") no-repeat 0 0;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 50%;
+	right: -15px;
+	transform: translateY(-50%);
+}
+#pdfDl .listKeyward dl dd {
+	width: calc(100% - 235px);
+}
+#pdfDl .listKeyward dl dd ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+  margin-bottom: -5px;
+}
+#pdfDl .listKeyward dl dd ul li {
+	margin: 0 10px 5px 0;
+}
+#pdfDl .listKeyward dl dd ul li a {
+	display: inline-block;
+	margin: 0;
+	padding: 8px;
+	border: 1px solid #0099cc;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #0099cc;
+}
+/*=============================================================
+ .addSearch
+=============================================================*/
+#pdfDl .addSearch {
+	/*display: block;*/
+	margin: 44px 0 0;
+	position: relative;
+  display: none;
+}
+#pdfDl .addSearch dt {
+	width: 200px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px 0 40px;
+	background-color: #fff;
+	border-radius: 9999px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	cursor: pointer;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s;
+}
+#pdfDl .addSearch dt span.icn {
+	width: 28px;
+	height: 28px;
+	display: block;
+	background-color: #0099cc;
+	border-radius: 9999px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+#pdfDl .addSearch dt span.icn:before, #pdfDl .addSearch dt span.icn:after {
+	content: "";
+	width: 14px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s;
+}
+#pdfDl .addSearch dt span.icn:after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+#pdfDl .addSearch .open dt span.icn:before {
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+#pdfDl .addSearch .open dt span.icn:after {
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+#pdfDl .addSearch dd {
+	width: 100%;
+	padding: 40px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: none;
+}
+#pdfDl .addList {
+	border-bottom: 1px solid #ccc;
+}
+#pdfDl .addList .boxAddList {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0 0;
+	border-top: 1px solid #ccc;
+	font-size: 14px;
+	text-align: left;
+}
+#pdfDl .addList .boxAddList p {
+	width: 170px;
+}
+#pdfDl .addList .boxAddList ul {
+	width: calc(100% - 170px);
+	display: flex;
+	flex-wrap: wrap;
+}
+#pdfDl .addList .boxAddList ul li {
+	width: calc(20% - 5px);
+	margin: 0 0 10px;
+	text-indent: -17px;
+	padding: 0 0 0 17px;
+}
+#pdfDl .addList .boxAddListItem ul li {
+	width: calc(25% - 5px);
+}
+#pdfDl .addSearchBtn {
+	width: 290px;
+	margin: 10px auto 0;
+}
+#pdfDl .addSearchBtn ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#pdfDl .addSearchBtn ul li {
+	width: 48%;
+	margin: 10px 0 0;
+}
+#pdfDl .addSearchBtn ul li input {
+	width: 100%;
+	padding: 8px;
+	color: #fff;
+	background-color: #666;
+	border: none;
+	border-radius: 5px;
+	transition: all 0.2s;
+}
+#pdfDl .addSearchBtn ul li input:hover {
+	opacity: 0.5;
+}
+#pdfDl .addSearchBtn ul li:nth-child(2) input {
+	background-color: #0099cc;
+}
+/*=============================================================
+ #listArea
+=============================================================*/
+#pdfDl #listArea {
+	padding: 0 20px 70px 20px;
+	background-color: #e7f4f7;
+}
+/*=============================================================
+ #selectKeyword
+=============================================================*/
+#pdfDl #listArea #selectKeyword {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 70px 0 0;
+	font-size: 14px;
+  display: none;
+}
+#pdfDl #listArea #selectKeywordInner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#pdfDl #listArea #selectKeywordInner .boxL {
+	width: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #666;
+	color: #fff;
+}
+#pdfDl #listArea #selectKeywordInner .boxR {
+	width: calc(100% - 140px);
+	padding: 15px;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl + dl {
+	margin-top: 5px;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dt {
+	width: 120px;
+	padding: 0;
+	text-align: center;
+	background-color: #dadada;
+	border-radius: 5px;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dd {
+	width: calc(100% - 120px);
+	text-align: left;
+	padding: 0 0 0 10px;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dd ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dd ul li {
+	padding: 0;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dd ul li:after {
+	content: "/";
+	display: inline-block;
+	width: 1.5em;
+	text-align: center;
+}
+#pdfDl #listArea #selectKeywordInner .boxR dl dd ul li:last-child:after {
+	display: none;
+}
+/*=============================================================
+ #pdfList
+=============================================================*/
+#pdfDl #listArea #pdfList {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 70px 0 0;
+}
+#pdfDl #listArea #pdfList #pdfListTtl {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #666;
+	font-size: 16px;
+}
+#pdfDl #listArea #pdfList #pdfListTtl h2 {
+	font-size: 24px;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul {
+	display: flex;
+	align-items: center;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li p.btn a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	height: 40px;
+	padding: 0 10px;
+	background-color: #f8f012;
+	color: #333;
+	font-weight: 700;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li p.btn a span {
+	display: inline-block;
+	padding: 0 0 0 22px;
+	background: url("/pdfdownload/img/icn_dl_top5.png") no-repeat 0 center;
+	background-size: 17px 22px;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li.sort {
+	order: 1;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li.sort p {
+	padding-right: 10px;
+	white-space: nowrap;
+}
+#pdfDl #listArea #pdfList #pdfListTtl ul li.sort select {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 60px 0 10px;
+	outline: none;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("/pdfdownload/img/btn_select.png") #f8f8f8 right top no-repeat;
+	background-size: auto 100%;
+	font-size: 16px;
+}
+/*=============================================================
+ #pdfListArea
+=============================================================*/
+#pdfDl #listArea #pdfList #pdfListArea {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#pdfDl #listArea #pdfList #pdfListArea:before,
+#pdfDl #listArea #pdfList #pdfListArea:after{
+	content: "";
+	width: calc((100% - 120px) / 4);
+	height: 0;
+	overflow: hidden;
+}
+#pdfDl #listArea #pdfList #pdfListArea:before{
+	order: 1;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box {
+	width: calc((100% - 120px) / 4);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 40px 0 0;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo {
+	padding: 10px 20px 10px 20px;
+	text-align: left;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxDate {
+	height: 3.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+	border-bottom: 1px dotted #666;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxDate span.new {
+	width: 3em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	padding: 2px 5px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #cc0000;
+	color: #fff;
+	text-align: center;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxTtl {
+	width: 100%;
+	height: 6em;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	line-height: 1.45;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum {
+	width: 100%;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a {
+	border: 1px solid #eee;
+	position: relative;
+	display: block;
+	text-decoration: none;
+	transition: all 0.4s;
+	background-color: #eee;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover {
+	opacity: 1;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:after, #pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:before, #pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure:after, #pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 10;
+	transition: all 0.4s;
+	background-color: #ff6600;
+}
+/* 左上へ配置 */
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:after {
+	width: 0px;
+	height: 3px;
+	top: -1px;
+	left: -1px;
+}
+/* 右下へ配置 */
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:before {
+	width: 0px;
+	height: 3px;
+	right: -1px;
+	bottom: -1px;
+}
+/* 左下へ配置 */
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure:after {
+	width: 3px;
+	height: 0px;
+	left: -1px;
+	bottom: -1px;
+}
+/* 右上へ配置 */
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure:before {
+	width: 3px;
+	height: 0px;
+	top: -1px;
+	right: -1px;
+}
+/* hover */
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover:after, #pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover:before {
+	width: 100%;
+	width: calc(100% + 1px);
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover figure:after, #pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover figure:before {
+	height: 100%;
+	height: calc(100% + 1px);
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure {
+	display: block;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a figure .boxLarge {
+	width: 26px;
+	height: 26px;
+	background: url("/pdfdownload/img/icn_large.png") no-repeat 0 0;
+	background-size: 100% 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	z-index: 100;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a span.boxThum {
+	display: block;
+	position: relative;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a span.boxThum:before {
+	content: "";
+	width: 100%;
+	height: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.75)100%);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	opacity: 0;
+	transition: all 0.2s;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover span.boxThum:before {
+	height: 100%;
+	opacity: 1;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a span.boxThum:after {
+	content: "MORE";
+	width: 100px;
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #333;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	border-radius: 999px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	z-index: 3;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all 0.2s;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .thum a:hover span.boxThum:after {
+	transform: translateX(-50%);
+	bottom: 20px;
+	opacity: 1;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .category {
+	width: 100%;
+	height: 2.5em;
+	padding: 0 10px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	line-height: 1.25;
+	background-color: #eeeeee;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .size {
+	width: 100%;
+	padding: 5px 10px 0;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .store {
+	width: 100%;
+	padding: 0 10px;
+	color: #0099cc;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .btnDl {
+	width: 100%;
+	height: 50px;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .btnDl a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+	background-color: #0099cc;
+	color: #fff;
+	font-weight: 700;
+	font-size: 16px;
+}
+#pdfDl #listArea #pdfList #pdfListArea .box .btnDl a span {
+	display: inline-block;
+	padding: 0 0 0 22px;
+	background: url("/pdfdownload/img/icn_dl.png") no-repeat 0 center;
+	background-size: 17px 22px;
+}
+/*=============================================================
+ #pdfListNum
+=============================================================*/
+#pdfDl #listArea #pdfList #pdfListNum {
+	width: 100%;
+	max-width: 345px;
+	margin: 0 auto;
+	padding: 40px 0 0;
+	font-size: 14px;
+}
+#pdfDl #listArea #pdfList #pdfListNum ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px 0 0;
+}
+#pdfDl #listArea #pdfList #pdfListNum ul li {
+	width: 36px;
+	height: 36px;
+	margin: 0 2px;
+	background: url("/pdfdownload/img/bg_num.png") no-repeat 0 0;
+	background-size: 100% 100%;
+	border-radius: 9999px;
+	overflow: hidden;
+}
+#pdfDl #listArea #pdfList #pdfListNum ul li.is-disabled {
+  pointer-events: none;
+  cursor: default;
+  display: none;
+}
+#pdfDl #listArea #pdfList #pdfListNum ul li a {
+	width: 36px;
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #333;
+	background-color: #fff;
+}
+#pdfDl #listArea #pdfList #pdfListNum ul li.prev a {}
+#pdfDl #listArea #pdfList #pdfListNum ul li.next a {
+	transform: rotate(180deg);
+}
+#pdfDl #listArea #pdfList #pdfListNum ul li.act a {
+	color: #fff;
+	background-color: #0099cc;
+}
+/*=============================================================
+ #pdfWin
+=============================================================*/
+#pdfDl #listArea #pdfWinOver {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 999998;
+	display: none;
+}
+#pdfDl #listArea .pdfWin {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999;
+	display: none;
+}
+#pdfDl #listArea .pdfWinScroll {
+	max-width: 95%;
+	height: 95%;
+	max-height: 1080px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 999999;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+	display: flex;
+	box-shadow: 0px 0px 15px -5px #777777;
+}
+#pdfDl #listArea .pdfWinClose {
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#pdfDl #listArea .pdfWinClose:before,
+#pdfDl #listArea .pdfWinClose:after {
+	content: "";
+	width: 2px;
+	height: 100%;
+	background-color: #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+#pdfDl #listArea .pdfWinClose:before {
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+#pdfDl #listArea .pdfWinClose:after {
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+#pdfDl #listArea .pdfWinInner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 40px;
+}
+
+#pdfDl #listArea .pdfWinInner .boxThum {
+	height: 100%;
+	border: 1px solid #eee;
+}
+#pdfDl #listArea .pdfWinInner .boxThum img {
+	width: auto;
+	max-width: none;
+	max-height: 100%;
+}
+#pdfDl #listArea .pdfWinInner .boxClm {
+	width: 300px;
+	height: 100%;
+	padding: 0 0 0 30px;
+	text-align: left;
+	overflow: auto;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .boxDate {
+	height: 3.5em;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	border-bottom: 1px dotted #666;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .boxDate span.new {
+	width: 3em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	margin: 0 0 0 10px;
+	padding: 2px 5px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #cc0000;
+	color: #fff;
+	text-align: center;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .boxTtl {
+	width: 100%;
+	height: 6em;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	line-height: 1.45;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .category {
+	width: 100%;
+	height: 3.5em;
+	padding: 0 10px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	line-height: 1.45;
+	background-color: #eeeeee;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .size {
+	width: 100%;
+	padding: 5px 10px 0;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .message {
+  width: 100%;
+  padding: 10px 10px 0;
+  margin-top: 10px;
+  border-top: 1px dotted #7c7c7c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .message:empty {
+  display: none;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .message a {
+  color: #0099cc;
+  text-decoration: underline;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .message a:hover {
+  text-decoration: none;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .store {
+	width: 100%;
+	padding: 0 10px;
+	color: #0099cc;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnDl {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0 0;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnDl a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #0099cc;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnCopyURL {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0 0;
+  /*display: none;*/
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnCopyURL b {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid #0099cc;
+  background: white;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  transition: .2s;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnCopyURL b span {
+  display: inline-block;
+  padding: 0 0 0 28px;
+  background: url("/pdfdownload/img/icn_url_copy.png") no-repeat 0 center;
+  background-size: 23px 23px;
+  color: #0099cc;
+  cursor: pointer;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnCopyURL b:hover {
+  opacity: .7;
+}
+
+#pdfDl #listArea .pdfWinInner .boxClm a span {
+	display: inline-block;
+	padding: 0 0 0 22px;
+	background: url("/pdfdownload/img/icn_dl.png") no-repeat 0 center;
+	background-size: 17px 22px;
+}
+/*=============================================================
+ aside
+=============================================================*/
+#pdfDl aside {
+	margin: 80px 20px;
+}
+#pdfDl aside #btmBnr {
+	max-width: 670px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #0099cc;
+	border-radius: 10px;
+	text-align: left;
+}
+#pdfDl aside #btmBnr .boxL {
+	width: calc(100% - 256px);
+}
+#pdfDl aside #btmBnr .boxL h2 {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0099cc;
+}
+#pdfDl aside #btmBnr .boxL .btn {
+	display: inline-block;
+}
+#pdfDl aside #btmBnr .boxL .btn a {
+	display: flex;
+	align-items: center;
+	margin: 10px 0 0;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: #0099cc;
+}
+#pdfDl aside #btmBnr .boxL .btn span.icn {
+	width: 26px;
+	height: 21px;
+	background: url("/pdfdownload/img/icn_catalog.png") no-repeat 0 0;
+	background-size: 100% 100%;
+}
+#pdfDl aside #btmBnr .boxL .btn span.txt {
+	margin: 0 0 0 5px;
+	white-space: nowrap;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+#pdfDl aside #btmBnr .boxR {
+	width: 246px;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Smartphones
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media only screen and (max-width: 899px) {
+	/*=============================================================
+ #main
+=============================================================*/
+	#pdfDl main {
+		font: normal normal 13px/1.7 'Noto Sans JP', sans-serif;
+		text-align: center;
+	}
+	/*=============================================================
+ #pageTtl
+=============================================================*/
+	#pdfDl #intro #pageTtl {
+		background: url("/pdfdownload/img/bg_ttl.png") no-repeat center 0;
+		background-size: auto 150px;
+	}
+	#pdfDl #intro #pageTtl h1 {
+		padding-top: 10px;
+		font-size: 30px;
+		line-height: 1.25;
+	}
+	#pdfDl #intro #pageTtl p {
+		padding: 20px 0 10px;
+		font-size: 15px;
+	}
+	#pdfDl #intro #pageCatalogBtn {
+	position: static;
+}
+	/*=============================================================
+ #searchArea
+=============================================================*/
+	#pdfDl #searchAreaInner .boxSearch {
+		display: block;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner {
+		width: calc(100%);
+		display: block;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner .boxNum {
+		width: 100%;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner .boxKeyword {
+		width: 100%;
+		margin-top: 20px;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner dl {
+		height: auto;
+		display: block;
+		border-radius: 0;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner dl dt {
+		display: block;
+		background-color: #e8e8e8;
+		color: #666666;
+		text-align: left;
+		font-size: 14px;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner .boxNum dt {
+		width: 100%;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner .boxKeyword dt {
+		width: 100%;
+	}
+	#pdfDl #searchAreaInner .boxSearchInner dl dd {
+		width: 100%;
+	}
+	#pdfDl #searchAreaInner .btnSearch {
+		width: 83px;
+		margin: 20px auto 0;
+	}
+	/*=============================================================
+ .listKeyward
+=============================================================*/
+	#pdfDl .listKeyward dl {
+		display: block;
+	}
+	#pdfDl .listKeyward dl dt {
+		width: 100%;
+		text-align: center;
+		padding: 5px 0;
+	}
+	#pdfDl .listKeyward dl dt:after {
+		display: none;
+	}
+	#pdfDl .listKeyward dl dd {
+		width: calc(100%);
+	}
+	#pdfDl .listKeyward dl dd ul li {
+		margin: 10px 10px 0 0;
+	}
+	#pdfDl .listKeyward dl dd ul li a {}
+	/*=============================================================
+ .addSearch
+=============================================================*/
+	#pdfDl .addSearch dd {
+		padding: 40px 10px;
+	}
+	#pdfDl .addList {
+		border-bottom: 1px solid #ccc;
+	}
+	#pdfDl .addList .boxAddList {
+		display: block;
+	}
+	#pdfDl .addList .boxAddList p {
+		width: 100%;
+		color: #0099cc;
+		padding: 0 0 10px;
+	}
+	#pdfDl .addList .boxAddList ul {
+		width: calc(100%);
+	}
+	#pdfDl .addList .boxAddList ul li {
+		width: calc(50% - 5px);
+	}
+	#pdfDl .addList .boxAddListItem ul li {
+		width: calc(50% - 5px);
+	}
+	#pdfDl .addSearchBtn {
+		width: 100%;
+		max-width: 290px;
+		margin: 10px auto 0;
+	}
+	#pdfDl .addSearchBtn ul li {
+		width: 48%;
+		margin: 10px 0 0;
+	}
+	/*=============================================================
+ #listArea
+=============================================================*/
+	#pdfDl #listArea {
+		padding: 0 20px 70px 20px;
+	}
+	/*=============================================================
+ #selectKeyword
+=============================================================*/
+	#pdfDl #listArea #selectKeyword {
+		padding: 60px 0 0;
+		font-size: 13px;
+	}
+	#pdfDl #listArea #selectKeywordInner {
+		display: block;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxL {
+		width: 100%;
+		display: block;
+		padding: 5px;
+		text-align: center;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR {
+		width: calc(100%);
+		padding: 0;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR dl {
+		width: 100%;
+		display: block;
+		align-items: left;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR dl + dl {
+		margin-top: 10px;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR dl dt {
+		width: 100%;
+		padding: 5px;
+		border-radius: 0;
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR dl dd {
+		width: calc(100%);
+		text-align: left;
+		padding: 10px
+	}
+	#pdfDl #listArea #selectKeywordInner .boxR dl dd ul li {
+		padding: 0;
+	}
+	/*=============================================================
+ #pdfList
+=============================================================*/
+	#pdfDl #listArea #pdfList {
+		padding: 60px 0 0;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl {
+		display: block;
+		justify-content: space-between;
+		font-size: 14px;
+		border: none;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl h2 {
+		font-size: 24px;
+		padding: 0 0 5px;
+		border-bottom: 3px solid #666;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl ul {
+		width: 100%;
+		display: block;
+		padding-top: 5px;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl ul li {
+		display: block;
+		padding-left: 0px;
+		padding-top: 5px;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl ul li.sort {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl ul li.sort p {
+		padding: 0 10px 0 0;
+		white-space: nowrap;
+	}
+	#pdfDl #listArea #pdfList #pdfListTtl ul li.sort select {
+		flex: 1;
+		font-size: 14px;
+	}
+	/*=============================================================
+ #pdfListArea
+=============================================================*/
+#pdfDl #listArea #pdfList #pdfListArea:before,
+#pdfDl #listArea #pdfList #pdfListArea:after{
+	content: "";
+		width: calc((100% - 10px) / 2);
+	height: 0;
+	overflow: hidden;
+}
+	#pdfDl #listArea #pdfList #pdfListArea .box {
+		width: calc((100% - 10px) / 2);
+		margin: 10px 0 0;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo {
+		padding: 10px 10px 10px 10px;
+		text-align: left;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxDate {
+		font-size: 11px;
+		line-height: 1.15;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxDate p span {
+		display: inline-block;
+		text-align: center;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .boxTtl {
+		font-size: 14px;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .category {
+		font-size: 14px;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .size {
+		font-size: 13px;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .boxInfo .store {
+		font-size: 13px;
+	}
+	#pdfDl #listArea #pdfList #pdfListArea .box .btnDl a {
+		font-size: 16px;
+	}
+	/*=============================================================
+ #pdfListNum
+=============================================================*/
+	#pdfDl #listArea #pdfList #pdfListNum {
+		font-size: 13px;
+	}
+	#pdfDl #listArea #pdfList #pdfListNum ul li {
+		width: 30px;
+		height: 30px;
+	}
+	#pdfDl #listArea #pdfList #pdfListNum ul li a {
+		width: 30px;
+		height: 30px;
+	}
+/*=============================================================
+ #pdfWin
+=============================================================*/
+#pdfDl #listArea .pdfWinScroll {
+	max-width:none;
+	max-height: calc(100% - 20px);
+	width: calc(100% - 20px);
+	height: auto;
+	overflow-y: auto;
+}
+#pdfDl #listArea .pdfWinClose {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background-color: #666;
+}
+#pdfDl #listArea .pdfWinClose:before,
+#pdfDl #listArea .pdfWinClose:after {
+	background-color: #fff;
+}
+#pdfDl #listArea .pdfWinInner {
+	height: auto;
+	display: block;
+	padding: 10px;
+}
+#pdfDl #listArea .pdfWinInner .boxThum {
+	width: 100%;
+	height: auto;
+}
+#pdfDl #listArea .pdfWinInner .boxThum img {
+	width: 100%;
+	max-height: none;
+	height: auto;
+}
+#pdfDl #listArea .pdfWinInner .boxClm {
+	width: 100%;
+	padding: 20px 0 10px;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .boxDate {
+	font-size: 11px;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .boxTtl {
+	height: 5em;
+	font-size: 14px;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .category {
+	font-size: 14px;
+}
+#pdfDl #listArea .pdfWinInner .boxClm .btnDl a {
+	font-size: 14px;
+}
+	/*=============================================================
+ aside
+=============================================================*/
+	#pdfDl aside {
+		margin: 60px 20px;
+	}
+	#pdfDl aside #btmBnr {
+		display: block;
+	}
+	#pdfDl aside #btmBnr .boxL {
+		width: calc(100%);
+		text-align: center;
+	}
+	#pdfDl aside #btmBnr .boxL h2 {
+		font-size: 16px;
+		text-align: center;
+	}
+	#pdfDl aside #btmBnr .boxL .btn span.txt {
+		font-size: 14px;
+	}
+	#pdfDl aside #btmBnr .boxR {
+		width: 100%;
+		max-width: 300px;
+		margin: 20px auto 0;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+  .p-float_link {
+    position: fixed;
+    right: 0;
+    bottom: 85px;
+    z-index: 1000;
+  }
+
+  .p-float_link a {
+    width: 150px;
+    height: 160px;
+    border-radius: 10px 0 0 10px;
+    background: #073396;
+    padding: 20px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+  .p-float_link .c-caption {
+    /*padding-right: 8px;*/
+    /*padding-left: calc(8px + 16px + 6px);*/
+    padding: 5px 0 5px calc(8px + 16px + 6px);
+    background: white;
+    width: 100%;
+    border-radius: 7px;
+    font-size: 14px;
+    text-align: left;
+    color: #073396;
+    position: relative;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .p-float_link .c-caption b {
+    font-size: 16px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .p-float_link .c-caption::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    background-color: #073396;
+    background-image: url(../img/icn_arrow_float.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #pdfDl #listArea .pdfWinInner {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #pdfDl #listArea .pdfWinInner::-webkit-scrollbar {
+    display: none;
+  }
+
+  #pdfDl #listArea .pdfWinInner .pdfWinInnerContents {
+    width: 100%;
+    /*height: 100%;*/
+    display: flex;
+    padding: 40px;
+    min-height: calc(100% + 1px);
+    /*background: pink;*/
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .p-float_link {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #073396;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .p-float_link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border-radius: 7px;
+  }
+
+  .p-float_link .c-book {
+    width: 40px;
+    height: 32px;
+    background: #073396;
+    border-radius: 7px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-float_link .c-book img {
+    width: 29px;
+    height: 22px;
+  }
+
+  .p-float_link .c-caption {
+    background: white;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    color: #073396;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .p-float_link .c-caption b {
+    font-size: 16px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  .p-float_link .c-caption::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #073396;
+    background-image: url(../img/icn_arrow_float.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 5px;
+  }
+
+  #pdfDl #listArea .pdfWinInner {
+    overflow: auto;
+  }
+
+  #pdfDl #listArea .pdfWinInner .pdfWinInnerContents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: calc(100% + 1px);
+    /*background: pink;*/
+    outline: none;
+  }
+
+  #pdfDl #listArea #pdfWinOver {
+    overscroll-behavior: contain;
+    overflow-y: scroll;
+  }
+  #pdfDl #listArea #pdfWinOver::after {
+    height:calc(100vh + 1px) ;
+    height:calc(100dvh + 1px) ;
+    width: 1px;
+    background-color: transparent;
+  }
+
+  #pdfDl #listArea .pdfWinScroll {
+    min-height:calc(100dvh - 20px) ;
+  }
+
+  #pdfDl #listArea .pdfWinInner .boxThum {
+    order: 2;
+  }
+
+  #pdfDl #listArea .pdfWinInner .boxClm {
+    order: 1;
+    padding-bottom: 20px;
+  }
+}

@@ -1,0 +1,142 @@
+<div id="pdfDl">
+    <div id="intro">
+        <div id="introInner">
+            <div id="pageTtl">
+                <h1>商品提案チラシ<span class="dsp-inlineBlock">PDFダウンロード</span></h1>
+                <p>アイ・オー・データの商品提案チラシを<span class="dsp-inlineBlock">ダウンロードできます。</span><br>
+                    そのほか、販促資料を<span class="dsp-inlineBlock">お求めの販売店様は</span><a href="https://partner.iodata.jp/" target="_blank"><br>
+                    アイオー・パートナー・サービス</a><span class="dsp-inlineBlock">にて提供しております。</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div id="listArea">
+            <!-- selectKeyword -->
+            <div id="selectKeyword">
+                <div id="selectKeywordInner">
+                    <div class="boxL">
+                        <p>絞り込み条件</p>
+                    </div>
+                    <div class="boxR">
+                        <dl>
+                            <dt>ソリューション</dt>
+                            <dd>
+                                <ul>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>業種</dt>
+                            <dd>
+                                <ul>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>商品</dt>
+                            <dd>
+                                <ul>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- //selectKeyword -->
+            <!-- pdflist -->
+            <div id="pdfList">
+                <!-- pdfListTtl -->
+                <div id="pdfListTtl">
+                    <h2>「{{size}}」件の検索結果</h2>
+                </div>
+                <!-- //pdfListTtl -->
+                <!-- pdfListArea -->
+                <div id="pdfListArea">
+                    <!-- item block -->
+                    {% for dataPdf in pdfDownload %}
+                        <div class="box" data-pdf="{{dataPdf['field_pdf_name']}}">
+                            <div class="boxInfo">
+                                <div class="boxDate">
+                                    <p>更新日：<span>{{dataPdf['field_pdf_release_date']}}</span></p>
+                                </div>
+                                <div class="boxTtl">
+                                    <h3>{{dataPdf['field_pdf_title']}}</h3>
+                                </div>
+                                <div class="thum">
+                                    <a href="#" id="win_{{dataPdf['field_pdf_vid']}}" class="winOpen">
+                                        <figure>
+                                            <span class="boxThum"><img src="{{dataPdf['field_pdf_thumbnail']}}" alt=""></span>
+                                            <span class="boxLarge"></span>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="category">
+                                    <p>
+                                        {{dataPdf['field_pdf_category']}}
+                                    </p>
+                                </div>
+                                <div class="size">
+                                    <p>
+                                        サイズ： {{dataPdf['field_pdf_type']}} / {{dataPdf['field_pdf_number_page']}}ページ
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="display: none;" class="comment"></div>
+                            <p class="btnDl"><a href="{{dataPdf['field_pdf_file']}}" class="pdf_download_json" data-pdf_id="win_{{dataPdf['field_pdf_vid']}}" target="_blank"><span>ダウンロード</span></a></p>
+                        </div>
+                    {% endfor %}
+                    <!-- /item block -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="pdfWinId" class="pdfWin" style="display: none;">
+    <div class="pdfWinScroll">
+        <div class="pdfWinClose"></div>
+        <div class="pdfWinInner">
+            <div class="pdfWinInnerContents" tabindex="1">
+                <a href="/pdfdownload/pdf/I-ODATA＿MacとつなげるならUSBType-Cディスプレイ.pdf" target="_blank" class="boxThum pdfWinPdfDownload pdf_download_json" data-pdf_id="">
+                <img id="pdfWinThumbnail" src="/pdfdownload/thumbnail/n5KfJHJ2t7DeumejvABYpefJpHn5cnMdj7M5SezG.png" alt="">
+                </a>
+                <div class="boxClm">
+                    <div class="boxDate">
+                        <p>更新日：<span id="pdfWinLastUpdate">2025年04月24日</span></p>
+                        <span id="pdfWinNew" class="new" style="">NEW</span>
+                    </div>
+                    <div class="boxTtl">
+                        <h3 id="pdfWinTitle">MacとつなげるならUSB Type-Cディスプレイ</h3>
+                    </div>
+                    <div class="category">
+                        <p id="pdfWinType">
+                            チラシ
+                        </p>
+                    </div>
+                    <div class="size">
+                        <p id="pdfWinSizePage" class="pdfSize">
+                            サイズ：A4
+                            &nbsp;/ 2ページ
+                        </p>
+                        <p id="pdfWinFileName" class="pdfName">I-ODATA＿MacとつなげるならUSBType-Cディスプレイ.pdf</p>
+                    </div>
+                    <div id="pdfWinComment" class="message"></div>
+                    <div id="pdfWinDealerFields" class="store" style="display:none;">
+                        <p>販売店記入あり</p>
+                    </div>
+                    <p class="btnDl">
+                        <a class="pdfWinPdfDownload pdf_download_json" data-pdf_id="" href="/pdfdownload/pdf/I-ODATA＿MacとつなげるならUSBType-Cディスプレイ.pdf" target="_blank">
+                        <span>ダウンロード</span>
+                        </a>
+                    </p>
+                    <p class="btnCopyURL" data-id="win_">
+                        <b>
+                        <span>この画面を共有する</span>
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

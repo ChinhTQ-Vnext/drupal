@@ -159,15 +159,73 @@ function my_module_entity_presave(\Drupal\Core\Entity\EntityInterface $entity)
     $final_url = '/' . trim($category_url, '/') . '/' . $slug;
 
     $entity->set('field_url', $final_url);
+
+    $is_published = $entity->isPublished();
+
+    // Process images
+    if ($entity->hasField('field_product_image') && !$entity->get('field_product_image')->isEmpty()) {
+      foreach ($entity->get('field_product_image') as $image_item) {
+        $media = \Drupal\media\Entity\Media::load($image_item->target_id);
+        if ($media && $media->get('status')->value !== $is_published) {
+          $media->set('status', $is_published ? 1 : 0)->save();
+        }
+      }
+    }
   }
 
   if ($entity instanceof NodeInterface && $entity->bundle() === 'product_spec') {
+    //Get status
+    $is_published = $entity->isPublished();
     // Save status 
     $product = $entity->get('field_product')->entity;
     $url = $product->field_url->uri;
     $final_url = '/' . trim($url, '/') . '/spec';
     $entity->set('field_url_spec', $final_url);
+
+    if ($entity->hasField('field_spec_carousel') && !$entity->get('field_spec_carousel')->isEmpty()) {
+      foreach ($entity->get('field_spec_carousel') as $image_item) {
+        $media = \Drupal\media\Entity\Media::load($image_item->target_id);
+        if ($media && $media->get('status')->value !== $is_published) {
+          $media->set('status', $is_published ? 1 : 0)->save();
+        }
+      }
+    }
+
+    if ($entity->hasField('field_list_pdf_specs') && !$entity->get('field_list_pdf_specs')->isEmpty()) {
+      foreach ($entity->get('field_list_pdf_specs') as $file_item) {
+        $media = \Drupal\media\Entity\Media::load($file_item->target_id);
+        if ($media && $media->get('status')->value !== $is_published) {
+          $media->set('status', $is_published ? 1 : 0)->save();
+        }
+      }
+    }
   }
+
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'pdfdownload') {
+    // Get status 
+    $is_published = $entity->isPublished();
+
+    // Process images
+    if ($entity->hasField('field_pdf_thumbnail') && !$entity->get('field_pdf_thumbnail')->isEmpty()) {
+      foreach ($entity->get('field_pdf_thumbnail') as $image_item) {
+        $media = \Drupal\media\Entity\Media::load($image_item->target_id);
+        if ($media && $media->get('status')->value !== $is_published) {
+          $media->set('status', $is_published ? 1 : 0)->save();
+        }
+      }
+    }
+    
+    // Process files
+    if ($entity->hasField('field_pdf_file') && !$entity->get('field_pdf_file')->isEmpty()) {
+      foreach ($entity->get('field_pdf_file') as $file_item) {
+        $media = \Drupal\media\Entity\Media::load($file_item->target_id);
+        if ($media && $media->get('status')->value !== $is_published) {
+          $media->set('status', $is_published ? 1 : 0)->save();
+        }
+      }
+    }
+  }
+
 }
 
 /**

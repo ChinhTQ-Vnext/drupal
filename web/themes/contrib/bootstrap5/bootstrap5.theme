@@ -378,6 +378,7 @@ function bootstrap5_theme_suggestions_menu_alter(array &$suggestions, array $var
 }
 
 require_once __DIR__ . '/includes/product_term_preprocess.php';
+require_once __DIR__ . '/includes/pdfdownload_preprocess.php';
 
 function bootstrap5_preprocess_views_view(&$variables)
 {
@@ -454,5 +455,10 @@ function bootstrap5_preprocess_views_view(&$variables)
     $variables['data_search'] = $products;
     $variables['size'] = $size;
     $variables['key_search'] = $exposed_input['keys'];
+  }
+
+  if($view->id() === 'pdfdownload') {
+    $variables['#attached']['library'][] = 'bootstrap5/pdfdownload_styles';
+    bootstrap5_preprocess_pdfdownload_views_view($variables);
   }
 }

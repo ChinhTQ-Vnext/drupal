@@ -170,6 +170,18 @@ product_detail_styles:
   dependencies:
     - core/jquery
 
+pdfdownload_styles:
+  version: 1.0
+  css:
+    theme:
+      css/common.css: {}
+      css/pdfdownload.css: {}
+
+pdfdownload:
+  version: 1.0
+  js:
+    js/pdfdownload.js: {}
+    
 search_styles:
   version: 1.0
   css:
